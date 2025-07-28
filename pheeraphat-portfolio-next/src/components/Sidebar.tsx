@@ -77,38 +77,9 @@ export default function Sidebar() {
               <time dateTime="2004-04-28">April 28, 2004</time>
             </div>
           </li>
-
-          <li className="contact-item">
-            <div className="icon-box">
-              <IoLocationOutline />
-            </div>
-
-            <div className="contact-info">
-              <p className="contact-title">Location</p>
-              <address>Thailand , Bangkok Sathorn 27</address>
-            </div>
-          </li>
         </ul>
 
         <div className="separator"></div>
-
-        <ul className="social-list">
-          <li className="social-item">
-            <a href="#" className="social-link">
-              <IoLogoFacebook />
-            </a>
-          </li>
-          <li className="social-item">
-            <a href="#" className="social-link">
-              <IoLogoTwitter />
-            </a>
-          </li>
-          <li className="social-item">
-            <a href="#" className="social-link">
-              <IoLogoInstagram />
-            </a>
-          </li>
-        </ul>
       </div>
     </aside>
   );

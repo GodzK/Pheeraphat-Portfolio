@@ -7,25 +7,25 @@ export default function ContactPage() {
     {
       name: 'Instagram',
       icon: <FaInstagram size={36} color="#fff" />,
-      url: 'https://instagram.com/yourusername',
+      url: 'https://www.instagram.com/phx_pd?fbclid=IwY2xjawL0HY9leHRuA2FlbQIxMABicmlkETFIT0M5MlpPcGtPTHdEWXp6AR4TjL5MbWN7Fc_FhCHsyeXmfVle7CZw0e98UFIhjBlQBM6EYXAsqqIiIYWzmA_aem_5J2HRzlzwL2bX-pFh7fsFg',
       bg: 'linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%)',
     },
     {
       name: 'GitHub',
       icon: <FaGithub size={36} color="#fff" />,
-      url: 'https://github.com/yourusername',
+      url: 'https://github.com/Pheeraphat47',
       bg: 'linear-gradient(135deg, #333 0%, #444 100%)',
     },
     {
       name: 'Facebook',
       icon: <FaFacebook size={36} color="#fff" />,
-      url: 'https://facebook.com/yourusername',
+      url: 'https://www.facebook.com/pheeraphat.dherachaisuphakij',
       bg: 'linear-gradient(135deg, #1877f3 0%, #4e69a2 100%)',
     },
     {
       name: 'LinkedIn',
       icon: <FaLinkedin size={36} color="#fff" />,
-      url: 'https://linkedin.com/in/yourusername',
+      url: 'https://www.linkedin.com/in/pheeraphat-dherachaisuphakij/',
       bg: 'linear-gradient(135deg, #0077b5 0%, #00a0dc 100%)',
     },
   ];
