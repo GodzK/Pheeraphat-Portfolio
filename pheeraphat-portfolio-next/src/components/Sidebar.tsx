@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
+import { IoChevronDownOutline, IoMailOutline, IoPhonePortraitOutline, IoCalendarOutline, IoLocationOutline, IoLogoFacebook, IoLogoTwitter, IoLogoInstagram } from 'react-icons/io5';
 
 export default function Sidebar() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -13,23 +15,29 @@ export default function Sidebar() {
     <aside className={`sidebar ${isExpanded ? 'active' : ''}`} data-sidebar>
       <div className="sidebar-info">
         <figure className="avatar">
-          <img src="https://media.licdn.com/dms/image/v2/D5603AQEOqCwrluBHkw/profile-displayphoto-crop_800_800/B56ZhPLEvfHQAI-/0/1753674962024?e=1756339200&v=beta&t=IXZjC5AVLV1TEYr8RoaAOUbQnA2cw0PT0l2RIgb-hsU" alt="avatar" width="80" style={{borderRadius:"50%",scale:"1.5"}}/>
+          <Image
+            src="https://media.licdn.com/dms/image/v2/D5603AQEOqCwrluBHkw/profile-displayphoto-crop_800_800/B56ZhPLEvfHQAI-/0/1753674962024?e=1756339200&v=beta&t=IXZjC5AVLV1TEYr8RoaAOUbQnA2cw0PT0l2RIgb-hsU"
+            alt="avatar"
+            width={80}
+            height={80}
+            style={{ borderRadius: "50%", scale: "1.5" }}
+          />
         </figure>
 
         <div className="info-content">
           <h1 className="name" title="Pheeraphat Dherachaisuphakij">
             Pheeraphat <br />Dherachaisuphakij
           </h1>
-          <p className="title" style={{marginBottom:"6%"}}>product manager</p>
-           <p className="title" style={{marginBottom:"6%"}}> ux researcher</p>
-          <p className="title" style={{marginBottom:"6%"}}> business development</p>
-           <p className="title" style={{marginBottom:"6%"}}>quality assurance</p>
-             <p className="title" style={{marginBottom:"6%"}}>developer</p>
+          <p className="title" style={{ marginBottom: "6%" }}>product manager</p>
+           <p className="title" style={{ marginBottom: "6%" }}> ux researcher</p>
+          <p className="title" style={{ marginBottom: "6%" }}> business development</p>
+           <p className="title" style={{ marginBottom: "6%" }}>quality assurance</p>
+             <p className="title" style={{ marginBottom: "6%" }}>developer</p>
         </div>
 
         <button className="info-more-btn" onClick={toggleSidebar} data-sidebar-btn>
           <span>Show Contacts</span>
-          <ion-icon name="chevron-down" suppressHydrationWarning={true}></ion-icon>
+          <IoChevronDownOutline />
         </button>
       </div>
 
@@ -39,7 +47,7 @@ export default function Sidebar() {
         <ul className="contacts-list">
           <li className="contact-item">
             <div className="icon-box">
-              <ion-icon name="mail-outline" suppressHydrationWarning={true}></ion-icon>
+              <IoMailOutline />
             </div>
 
             <div className="contact-info">
@@ -50,7 +58,7 @@ export default function Sidebar() {
 
           <li className="contact-item">
             <div className="icon-box">
-              <ion-icon name="phone-portrait-outline" suppressHydrationWarning={true}></ion-icon>
+              <IoPhonePortraitOutline />
             </div>
 
             <div className="contact-info">
@@ -61,7 +69,7 @@ export default function Sidebar() {
 
           <li className="contact-item">
             <div className="icon-box">
-              <ion-icon name="calendar-outline" suppressHydrationWarning={true}></ion-icon>
+              <IoCalendarOutline />
             </div>
 
             <div className="contact-info">
@@ -72,7 +80,7 @@ export default function Sidebar() {
 
           <li className="contact-item">
             <div className="icon-box">
-              <ion-icon name="location-outline" suppressHydrationWarning={true}></ion-icon>
+              <IoLocationOutline />
             </div>
 
             <div className="contact-info">
@@ -87,17 +95,17 @@ export default function Sidebar() {
         <ul className="social-list">
           <li className="social-item">
             <a href="#" className="social-link">
-              <ion-icon name="logo-facebook" suppressHydrationWarning={true}></ion-icon>
+              <IoLogoFacebook />
             </a>
           </li>
           <li className="social-item">
             <a href="#" className="social-link">
-              <ion-icon name="logo-twitter" suppressHydrationWarning={true}></ion-icon>
+              <IoLogoTwitter />
             </a>
           </li>
           <li className="social-item">
             <a href="#" className="social-link">
-              <ion-icon name="logo-instagram" suppressHydrationWarning={true}></ion-icon>
+              <IoLogoInstagram />
             </a>
           </li>
         </ul>

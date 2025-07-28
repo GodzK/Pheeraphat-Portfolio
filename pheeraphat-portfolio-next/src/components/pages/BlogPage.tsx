@@ -3,8 +3,17 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
+type BlogPost = {
+  id: number;
+  title: string;
+  category: string;
+  date: string;
+  image: string;
+  text: string;
+};
+
 export default function BlogPage() {
-  const [modalPost, setModalPost] = useState(null);
+  const [modalPost, setModalPost] = useState<BlogPost | null>(null);
   const blogPosts = [
     {
       id: 1,

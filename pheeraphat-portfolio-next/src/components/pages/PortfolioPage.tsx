@@ -3,10 +3,18 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
+type Project = {
+  id: number;
+  title: string;
+  category: string;
+  image: string;
+  link: string;
+};
+
 export default function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [isSelectOpen, setIsSelectOpen] = useState(false);
-  const [modalProject, setModalProject] = useState(null);
+  const [modalProject, setModalProject] = useState<Project | null>(null);
 
   const projects = [
     {
@@ -64,7 +72,7 @@ export default function PortfolioPage() {
     ? projects 
     : projects.filter(project => project.category === activeFilter);
 
-  const handleFilterChange = (filter) => {
+  const handleFilterChange = (filter: string) => {
     setActiveFilter(filter);
     setIsSelectOpen(false);
   };
@@ -100,7 +108,7 @@ export default function PortfolioPage() {
               {filterCategories.find(cat => cat.id === activeFilter)?.label || 'Select Category'}
             </div>
             <div className="select-icon">
-              <ion-icon name="chevron-down"></ion-icon>
+              ▼
             </div>
           </button>
 
@@ -131,7 +139,7 @@ export default function PortfolioPage() {
               >
                 <figure className="project-img">
                   <div className="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    👁️
                   </div>
                   <Image
                     src={project.image}

@@ -1,5 +1,8 @@
 'use client';
 
+import Image from 'next/image';
+import { IoCloseOutline } from 'react-icons/io5';
+
 export default function AboutPage() {
   return (
     <>
@@ -14,12 +17,12 @@ export default function AboutPage() {
 
       <section className="service">
         <h3 className="h3 service-title">Hi My name is Pheeraphat Dherachaisuphakij ( PHEE )</h3>
-        <p className="about-text">I'm Interested in Product Management , Business , UX and Tech 🧑‍💻</p>
+        <p className="about-text">I&apos;m Interested in Product Management , Business , UX and Tech 🧑‍💻</p>
 
         <ul className="service-list">
           <li className="service-item">
             <div className="service-icon-box">
-              <img src="https://i.postimg.cc/4389jZkP/icon-design.png" alt="icon" width="40" />
+              <Image src="https://i.postimg.cc/4389jZkP/icon-design.png" alt="icon" width={40} height={40} />
             </div>
 
             <div className="service-content-box">
@@ -30,7 +33,7 @@ export default function AboutPage() {
 
           <li className="service-item">
             <div className="service-icon-box">
-              <img src="https://i.postimg.cc/ZqgqrqzG/icon-dev.png" alt="icon" width="40" />
+              <Image src="https://i.postimg.cc/ZqgqrqzG/icon-dev.png" alt="icon" width={40} height={40} />
             </div>
 
             <div className="service-content-box">
@@ -41,7 +44,7 @@ export default function AboutPage() {
 
           <li className="service-item">
             <div className="service-icon-box">
-              <img src="https://i.postimg.cc/xjLdzYxZ/icon-app.png" alt="icon" width="40" />
+              <Image src="https://i.postimg.cc/xjLdzYxZ/icon-app.png" alt="icon" width={40} height={40} />
             </div>
 
             <div className="service-content-box">
@@ -52,7 +55,7 @@ export default function AboutPage() {
 
           <li className="service-item">
             <div className="service-icon-box">
-              <img src="https://i.postimg.cc/0NL8zHpx/icon-photo.png" alt="icon" width="40" />
+              <Image src="https://i.postimg.cc/0NL8zHpx/icon-photo.png" alt="icon" width={40} height={40} />
             </div>
 
             <div className="service-content-box">
@@ -68,15 +71,15 @@ export default function AboutPage() {
 
         <section className="testimonials-modal">
           <button className="modal-close-btn" data-modal-close-btn>
-            <ion-icon name="close-outline"></ion-icon>
+            <IoCloseOutline size={24} />
           </button>
 
           <div className="modal-img-wrapper">
             <figure className="modal-avatar-box">
-              <img src="https://i.postimg.cc/zGDHfn3G/avatar-1.png" alt="Daniel Lewis" width="80" data-modal-img />
+              <Image src="https://i.postimg.cc/zGDHfn3G/avatar-1.png" alt="Daniel Lewis" width={80} height={80} data-modal-img />
             </figure>
 
-            <img src="https://i.postimg.cc/mZ00RwX7/icon-quote.png" alt="quote icon" />
+            <Image src="https://i.postimg.cc/mZ00RwX7/icon-quote.png" alt="quote icon" width={32} height={32} />
           </div>
 
           <div className="modal-content">
@@ -84,7 +87,7 @@ export default function AboutPage() {
             <time dateTime="2023-06-14">14 June, 2023</time>
 
             <div className="modal-text" data-modal-text>
-              <p>Richard was hired to create a corporate identity. It's modern, clean and with a beautiful design that got a lot of praises from colleagues and visitors. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client.</p>
+              <p>Richard was hired to create a corporate identity. It&apos;s modern, clean and with a beautiful design that got a lot of praises from colleagues and visitors. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client.</p>
             </div>
           </div>
         </section>

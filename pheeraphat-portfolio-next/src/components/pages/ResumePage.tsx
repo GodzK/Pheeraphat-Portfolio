@@ -74,7 +74,7 @@ export default function ResumePage() {
 
         <ol className="timeline-list">
           <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">King Mongkut's University of Technology Thonburi</h4>
+            <h4 className="h4 timeline-item-title">King Mongkut&apos;s University of Technology Thonburi</h4>
             <span>2022 - present</span>
             <p className="timeline-text">Bachelor of Science in Information Technology</p>
             <p className="timeline-text">Recipient of Saad-Lueang-RueangRung Creativity and Innovation Scholarship with 100% tuition fee waiver and monthly stipends supported, KMUTT Academic year 2023</p>
