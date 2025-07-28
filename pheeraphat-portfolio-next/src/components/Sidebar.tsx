@@ -28,11 +28,6 @@ export default function Sidebar() {
           <h1 className="name" title="Pheeraphat Dherachaisuphakij">
             Pheeraphat <br />Dherachaisuphakij
           </h1>
-          <p className="title" style={{ marginBottom: "6%" }}>product manager</p>
-           <p className="title" style={{ marginBottom: "6%" }}> ux researcher</p>
-          <p className="title" style={{ marginBottom: "6%" }}> business development</p>
-           <p className="title" style={{ marginBottom: "6%" }}>quality assurance</p>
-             <p className="title" style={{ marginBottom: "6%" }}>developer</p>
         </div>
 
         <button className="info-more-btn" onClick={toggleSidebar} data-sidebar-btn>

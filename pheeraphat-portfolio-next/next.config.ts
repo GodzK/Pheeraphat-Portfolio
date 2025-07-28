@@ -6,18 +6,13 @@ const nextConfig: NextConfig = {
    remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'i.postimg.cc',
+        hostname: '**', // Wildcard to allow all hostnames
+        pathname: '/**', // Wildcard to allow all paths
+      },
+      {
+        protocol: 'http', // Include HTTP for broader compatibility
+        hostname: '**',
         pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'tattered-hardboard-505.notion.site',
-        pathname: '/image/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'prod-files-secure.s3.us-west-2.amazonaws.com',
-        pathname: '/de7053b8-41e2-4a9c-b529-0f9c3cb781e1/**',
       },
     ],
     domains: [

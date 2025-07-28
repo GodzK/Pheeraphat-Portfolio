@@ -1,7 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import { IoCloseOutline } from 'react-icons/io5';
+import { FaProjectDiagram, FaChartLine, FaCheckCircle, FaSearch } from 'react-icons/fa';
 
 export default function AboutPage() {
   return (
@@ -11,87 +11,60 @@ export default function AboutPage() {
       </header>
 
       <section className="about-text">
+        <p>I&apos;m passionate about Product Management, Business Development, Quality Assurance, and UX Research.</p>
         <p>As the former vice president of SAMO SIT, I have experience working with cross-functional teams and organizing activities for SIT KMUTT students. I recently completed the Google Project Management Career Certificate,</p>
         <p>which covers traditional and Agile project management. My intern roles as a software developer and UX researcher have refined my technical and user-centered design skills. Additionally, participating in Hackathons and Startup Competitions has enhanced my creativity, solution development, and product creation abilities</p>
       </section>
 
       <section className="service">
-        <h3 className="h3 service-title">Hi My name is Pheeraphat Dherachaisuphakij ( PHEE )</h3>
-        <p className="about-text">I&apos;m Interested in Product Management , Business , UX and Tech 🧑‍💻</p>
+        <h3 className="h3 service-title">What I&apos;m Interested In</h3>
 
         <ul className="service-list">
           <li className="service-item">
             <div className="service-icon-box">
-              <Image src="https://i.postimg.cc/4389jZkP/icon-design.png" alt="icon" width={40} height={40} />
+              <FaProjectDiagram size={40} style={{ color: '#daab2dff' }} />
             </div>
 
             <div className="service-content-box">
-              <h4 className="h4 service-item-title">Web Design</h4>
-              <p className="service-item-text">The most modern and high-quality design made at a professional level.</p>
+              <h4 className="h4 service-item-title">Product Management</h4>
+              <p className="service-item-text">Leading cross-functional teams to deliver user-focused products with strategic planning and Agile methodologies.</p>
             </div>
           </li>
 
           <li className="service-item">
             <div className="service-icon-box">
-              <Image src="https://i.postimg.cc/ZqgqrqzG/icon-dev.png" alt="icon" width={40} height={40} />
+              <FaChartLine size={40} style={{ color: '#daab2dff' }} />
             </div>
 
             <div className="service-content-box">
-              <h4 className="h4 service-item-title">Web development</h4>
-              <p className="service-item-text">High-quality development of sites at the professional level.</p>
+              <h4 className="h4 service-item-title">Business Development</h4>
+              <p className="service-item-text">Driving growth through strategic partnerships, market analysis, and innovative solutions.</p>
             </div>
           </li>
 
           <li className="service-item">
             <div className="service-icon-box">
-              <Image src="https://i.postimg.cc/xjLdzYxZ/icon-app.png" alt="icon" width={40} height={40} />
+              <FaCheckCircle size={40} style={{ color: '#daab2dff' }} />
             </div>
 
             <div className="service-content-box">
-              <h4 className="h4 service-item-title">Mobile apps</h4>
-              <p className="service-item-text">Professional development of applications for iOS and Android.</p>
+              <h4 className="h4 service-item-title">Quality Assurance</h4>
+              <p className="service-item-text">Ensuring product excellence through rigorous testing and process optimization.</p>
             </div>
           </li>
 
           <li className="service-item">
             <div className="service-icon-box">
-              <Image src="https://i.postimg.cc/0NL8zHpx/icon-photo.png" alt="icon" width={40} height={40} />
+              <FaSearch size={40} style={{ color: '#daab2dff' }} />
             </div>
 
             <div className="service-content-box">
-              <h4 className="h4 service-item-title">Photography</h4>
-              <p className="service-item-text">I make high-quality photos of any category at a professional level.</p>
+              <h4 className="h4 service-item-title">UX Research</h4>
+              <p className="service-item-text">Conducting user-centered research to design intuitive and impactful user experiences.</p>
             </div>
           </li>
         </ul>
       </section>
-
-      <div className="modal-container" data-modal-container>
-        <div className="overlay" data-overlay></div>
-
-        <section className="testimonials-modal">
-          <button className="modal-close-btn" data-modal-close-btn>
-            <IoCloseOutline size={24} />
-          </button>
-
-          <div className="modal-img-wrapper">
-            <figure className="modal-avatar-box">
-              <Image src="https://i.postimg.cc/zGDHfn3G/avatar-1.png" alt="Daniel Lewis" width={80} height={80} data-modal-img />
-            </figure>
-
-            <Image src="https://i.postimg.cc/mZ00RwX7/icon-quote.png" alt="quote icon" width={32} height={32} />
-          </div>
-
-          <div className="modal-content">
-            <h4 className="h3 modal-title" data-modal-title>Daniel Lewis</h4>
-            <time dateTime="2023-06-14">14 June, 2023</time>
-
-            <div className="modal-text" data-modal-text>
-              <p>Richard was hired to create a corporate identity. It&apos;s modern, clean and with a beautiful design that got a lot of praises from colleagues and visitors. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client.</p>
-            </div>
-          </div>
-        </section>
-      </div>
     </>
   );
-} 
+}
