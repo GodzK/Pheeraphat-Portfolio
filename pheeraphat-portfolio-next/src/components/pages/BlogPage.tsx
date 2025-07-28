@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function BlogPage() {
   const [modalPost, setModalPost] = useState(null);
@@ -101,7 +102,7 @@ export default function BlogPage() {
                 onClick={() => setModalPost(post)}
               >
                 <figure className="blog-banner-box">
-                  <img src={post.image} alt={post.title} loading="lazy" />
+                  <Image src={post.image} alt={post.title} width={300} height={200} />
                 </figure>
 
                 <div className="blog-content">
@@ -142,7 +143,7 @@ export default function BlogPage() {
           alignItems: 'center',
           justifyContent: 'center'}}>×</button>
             <figure style={{marginBottom:16}}>
-              <img src={modalPost.image} alt={modalPost.title} style={{width:'100%', borderRadius:12, maxHeight:220, objectFit:'cover'}} />
+              <Image src={modalPost.image} alt={modalPost.title} width={600} height={300} style={{width:'100%', borderRadius:12, maxHeight:220, objectFit:'cover'}} />
             </figure>
             <h2 style={{marginBottom:8}}>{modalPost.title}</h2>
             <p style={{marginBottom:8, color:'#ffd700'}}>{modalPost.category}</p>

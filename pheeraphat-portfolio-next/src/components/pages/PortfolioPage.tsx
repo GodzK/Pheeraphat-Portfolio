@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -132,7 +133,17 @@ export default function PortfolioPage() {
                   <div className="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src={project.image} alt={project.title} loading="lazy" />
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={300}
+                    height={200}
+                    style={{
+                      width: '100%',
+                      borderRadius: 12,
+                      objectFit: 'cover'
+                    }}
+                  />
                 </figure>
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-category">{filterCategories.find(cat => cat.id === project.category)?.label}</p>
@@ -189,13 +200,14 @@ export default function PortfolioPage() {
               ×
             </button>
             <figure style={{ marginBottom: 16 }}>
-              <img
+              <Image
                 src={modalProject.image}
                 alt={modalProject.title}
+                width={600}
+                height={400}
                 style={{
                   width: '100%',
                   borderRadius: 12,
-                  maxHeight: 220,
                   objectFit: 'cover'
                 }}
               />

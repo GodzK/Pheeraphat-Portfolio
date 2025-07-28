@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { FaInstagram, FaGithub, FaFacebook, FaLinkedin } from 'react-icons/fa';
 
 export default function ContactPage() {

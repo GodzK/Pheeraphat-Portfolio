@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function ResumePage() {
   // Gallery state for each experience
@@ -99,17 +100,21 @@ export default function ResumePage() {
           <li className="timeline-item" style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: '1.5rem', flexWrap: 'wrap', padding: '1rem 0' }}>
             {/* LOGO */}
             <div style={{ ...logoContainerStyle, ...horizontalLogoStyle }}>
-              <img
+              <Image
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_znZ5Zxs5H0Ujjg3RnuH_P_ZsY3iZ4TjIdA&s"
                 alt="Skooldio logo"
+                width={80}
+                height={48}
                 style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               />
             </div>
             {/* GALLERY */}
             <div style={{ flexShrink: 0, width: '13.75rem', maxWidth: '90vw', marginBottom: 8, position: 'relative' }}>
-  <img
+  <Image
     src={skooldioImages[skooldioIdx]}
     alt={`Skooldio ${skooldioIdx + 1}`}
+    width={120}
+    height={90}
     style={{ width: '100%', height: '7.5rem', borderRadius: 12, border: '1.5px solid #fff', boxShadow: '0 2px 8px rgba(0,0,0,0.10)', objectFit: 'cover' }}
   />
   <button
@@ -175,17 +180,21 @@ export default function ResumePage() {
           <li className="timeline-item" style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: '1.5rem', flexWrap: 'wrap', padding: '1rem 0' }}>
             {/* LOGO */}
             <div style={{ ...logoContainerStyle, ...horizontalLogoStyle }}>
-              <img
+              <Image
                 src="https://www.infoquest.co.th/dxt-content/uploads/2020/03/20200323_PRG_SCB_FC_AbbreviatedLogo_Horizontal_PurpleBG-scaled.jpg"
                 alt="SCB logo"
+                width={80}
+                height={48}
                 style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               />
             </div>
             {/* GALLERY */}
             <div style={{ flexShrink: 0, width: '13.75rem', maxWidth: '90vw', marginBottom: 8, position: 'relative' }}>
-  <img
+  <Image
     src={scbImages[scbIdx]}
     alt={`SCB Techhub ${scbIdx + 1}`}
+    width={120}
+    height={90}
     style={{ width: '100%', height: '7.5rem', borderRadius: 12, border: '1.5px solid #fff', boxShadow: '0 2px 8px rgba(0,0,0,0.10)', objectFit: 'cover' }}
   />
   <button
@@ -249,9 +258,11 @@ export default function ResumePage() {
           <li className="timeline-item" style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: '1.5rem', flexWrap: 'wrap', padding: '1rem 0' }}>
             {/* LOGO */}
             <div style={{ ...logoContainerStyle, ...squareLogoStyle }}>
-              <img
+              <Image
                 src="https://media.licdn.com/dms/image/v2/D560BAQGQquSMebKE_Q/company-logo_200_200/company-logo_200_200/0/1714712721817?e=1756339200&v=beta&t=iLuvgKr1oGAsjKCO0Lo_hf_xoIAtkJrUESBXztRBy68"
                 alt="Innovasive logo"
+                width={72}
+                height={72}
                 style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               />
             </div>
@@ -275,9 +286,11 @@ export default function ResumePage() {
           <li className="timeline-item" style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: '1.5rem', flexWrap: 'wrap', padding: '1rem 0' }}>
             {/* LOGO */}
             <div style={{ ...logoContainerStyle, ...squareLogoStyle }}>
-              <img
+              <Image
                 src="https://media.licdn.com/dms/image/v2/C4D0BAQGRQp4hE-cLZg/company-logo_100_100/company-logo_100_100/0/1655716670526?e=1756339200&v=beta&t=t-paNt4aDEf2x0V4LJO_yyDscBXMA2suGLN3ugrp9TQ"
                 alt="UX Association logo"
+                width={72}
+                height={72}
                 style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               />
             </div>
