@@ -5,6 +5,7 @@ import { useState } from 'react';
 export default function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [isSelectOpen, setIsSelectOpen] = useState(false);
+  const [modalProject, setModalProject] = useState(null);
 
   const projects = [
     {
@@ -62,7 +63,7 @@ export default function PortfolioPage() {
     ? projects 
     : projects.filter(project => project.category === activeFilter);
 
-  const handleFilterChange = (filter: string) => {
+  const handleFilterChange = (filter) => {
     setActiveFilter(filter);
     setIsSelectOpen(false);
   };
@@ -116,7 +117,17 @@ export default function PortfolioPage() {
         <ul className="project-list">
           {filteredProjects.map((project) => (
             <li key={project.id} className="project-item active" data-filter-item data-category={project.category}>
-              <a href={project.link}>
+              <button
+                style={{
+                  width: '100%',
+                  background: 'none',
+                  border: 'none',
+                  padding: 0,
+                  cursor: 'pointer',
+                  textAlign: 'left'
+                }}
+                onClick={() => setModalProject(project)}
+              >
                 <figure className="project-img">
                   <div className="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
@@ -125,11 +136,95 @@ export default function PortfolioPage() {
                 </figure>
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-category">{filterCategories.find(cat => cat.id === project.category)?.label}</p>
-              </a>
+              </button>
             </li>
           ))}
         </ul>
       </section>
+
+      {modalProject && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          background: 'rgba(0,0,0,0.7)',
+          zIndex: 1000,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}>
+          <div style={{
+            background: '#222',
+            borderRadius: 16,
+            padding: 24,
+            maxWidth: 600,
+            width: '90vw',
+            maxHeight: '90vh',
+            position: 'relative',
+            boxShadow: '0 8px 32px rgba(0,0,0,0.5)',
+            color: '#fff'
+          }}>
+            <button
+              onClick={() => setModalProject(null)}
+              style={{
+                position: 'absolute',
+          top: 12,
+          right: 12,
+          background: '#444',
+          color: '#fff',
+          border: 'none',
+          borderRadius: '50%',
+          width: 36,
+          height: 36,
+          fontSize: 20,
+          cursor: 'pointer',
+          zIndex: 10,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+              }}
+            >
+              ×
+            </button>
+            <figure style={{ marginBottom: 16 }}>
+              <img
+                src={modalProject.image}
+                alt={modalProject.title}
+                style={{
+                  width: '100%',
+                  borderRadius: 12,
+                  maxHeight: 220,
+                  objectFit: 'cover'
+                }}
+              />
+            </figure>
+            <h2 style={{ marginBottom: 8 }}>{modalProject.title}</h2>
+            <p style={{ marginBottom: 8, color: '#ffd700' }}>
+              {filterCategories.find(cat => cat.id === modalProject.category)?.label}
+            </p>
+            {modalProject.link !== "#" && (
+              <a
+                href={modalProject.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-block',
+                  padding: '8px 16px',
+                  background: '#007bff',
+                  color: '#fff',
+                  borderRadius: 8,
+                  textDecoration: 'none',
+                  marginTop: 16
+                }}
+              >
+                Visit Project
+              </a>
+            )}
+          </div>
+        </div>
+      )}
     </>
   );
-} 
+}

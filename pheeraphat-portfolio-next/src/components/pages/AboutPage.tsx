@@ -13,7 +13,8 @@ export default function AboutPage() {
       </section>
 
       <section className="service">
-        <h3 className="h3 service-title">What I'm doing</h3>
+        <h3 className="h3 service-title">Hi My name is Pheeraphat Dherachaisuphakij ( PHEE )</h3>
+        <p className="about-text">I'm Interested in Product Management , Business , UX and Tech 🧑‍💻</p>
 
         <ul className="service-list">
           <li className="service-item">

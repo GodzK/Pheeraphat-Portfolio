@@ -12,15 +12,19 @@ export default function Sidebar() {
   return (
     <aside className={`sidebar ${isExpanded ? 'active' : ''}`} data-sidebar>
       <div className="sidebar-info">
-        <figure className="avatar-box">
-          <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*yfEkQ4mM1xl--BYtofPNwQ.jpeg" alt="avatar" width="80" />
+        <figure className="avatar">
+          <img src="https://media.licdn.com/dms/image/v2/D5603AQEOqCwrluBHkw/profile-displayphoto-crop_800_800/B56ZhPLEvfHQAI-/0/1753674962024?e=1756339200&v=beta&t=IXZjC5AVLV1TEYr8RoaAOUbQnA2cw0PT0l2RIgb-hsU" alt="avatar" width="80" style={{borderRadius:"50%",scale:"1.5"}}/>
         </figure>
 
         <div className="info-content">
           <h1 className="name" title="Pheeraphat Dherachaisuphakij">
             Pheeraphat <br />Dherachaisuphakij
           </h1>
-          <p className="title">Project manager</p>
+          <p className="title" style={{marginBottom:"6%"}}>product manager</p>
+           <p className="title" style={{marginBottom:"6%"}}> ux researcher</p>
+          <p className="title" style={{marginBottom:"6%"}}> business development</p>
+           <p className="title" style={{marginBottom:"6%"}}>quality assurance</p>
+             <p className="title" style={{marginBottom:"6%"}}>developer</p>
         </div>
 
         <button className="info-more-btn" onClick={toggleSidebar} data-sidebar-btn>
@@ -40,7 +44,7 @@ export default function Sidebar() {
 
             <div className="contact-info">
               <p className="contact-title">Email</p>
-              <a href="mailto:pheeraphat2547@gmail.com" className="contact-link">pheeraphat2547@gmail.com</a>
+              <a href="mailto:dpheeraphat2547@gmail.com" className="contact-link">dpheeraphat2547@gmail.com</a>
             </div>
           </li>
 
@@ -51,7 +55,7 @@ export default function Sidebar() {
 
             <div className="contact-info">
               <p className="contact-title">Phone</p>
-              <a href="tel:0816443069" className="contact-link">081-644-3069</a>
+              <a href="tel:(+66) 81 644 3069" className="contact-link">(+66) 81 644 3069</a>
             </div>
           </li>
 

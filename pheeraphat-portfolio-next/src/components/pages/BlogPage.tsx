@@ -1,6 +1,9 @@
 'use client';
 
+import { useState } from 'react';
+
 export default function BlogPage() {
+  const [modalPost, setModalPost] = useState(null);
   const blogPosts = [
     {
       id: 1,
@@ -86,7 +89,17 @@ export default function BlogPage() {
         <ul className="blog-posts-list">
           {blogPosts.map((post) => (
             <li key={post.id} className="blog-post-item">
-              <a href="#">
+              <button
+                style={{
+                  width: '100%',
+                  background: 'none',
+                  border: 'none',
+                  padding: 0,
+                  cursor: 'pointer',
+                  textAlign: 'left',
+                }}
+                onClick={() => setModalPost(post)}
+              >
                 <figure className="blog-banner-box">
                   <img src={post.image} alt={post.title} loading="lazy" />
                 </figure>
@@ -101,11 +114,43 @@ export default function BlogPage() {
                   <h3 className="h3 blog-item-title">{post.title}</h3>
                   <p className="blog-text">{post.text}</p>
                 </div>
-              </a>
+              </button>
             </li>
           ))}
         </ul>
       </section>
+
+      {/* Modal */}
+      {modalPost && (
+        <div style={{
+          position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.7)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center',
+        }}>
+          <div style={{ background: '#222', borderRadius: 16, padding: 24, maxWidth: 600, width: '90vw', maxHeight: '90vh', position: 'relative', boxShadow: '0 8px 32px rgba(0,0,0,0.5)', color: '#fff' }}>
+            <button onClick={() => setModalPost(null)} style={{ position: 'absolute',
+          top: 12,
+          right: 12,
+          background: '#444',
+          color: '#fff',
+          border: 'none',
+          borderRadius: '50%',
+          width: 36,
+          height: 36,
+          fontSize: 20,
+          cursor: 'pointer',
+          zIndex: 10,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'}}>×</button>
+            <figure style={{marginBottom:16}}>
+              <img src={modalPost.image} alt={modalPost.title} style={{width:'100%', borderRadius:12, maxHeight:220, objectFit:'cover'}} />
+            </figure>
+            <h2 style={{marginBottom:8}}>{modalPost.title}</h2>
+            <p style={{marginBottom:8, color:'#ffd700'}}>{modalPost.category}</p>
+            <p style={{marginBottom:16}}>{modalPost.text}</p>
+            <time style={{color:'#aaa'}}>{modalPost.date}</time>
+          </div>
+        </div>
+      )}
     </>
   );
 } 
