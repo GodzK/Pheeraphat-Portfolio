@@ -2,21 +2,23 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import innovasive from "../../../public/innovasive.png"
+import scb1 from "../../../public/scb1.jpg"
+import scb2 from "../../../public/scb2.jpg"
+import skd1 from "../../../public/skd1.jpg"
+import skd2 from "../../../public/sdk2.jpg"
+import skd3 from "../../../public/skd3.jpg"
+import skd4 from "../../../public/skd4.jpg"
+import uxasso from "../../../public/uxasso.jpg"
 
 export default function ResumePage() {
   // Gallery state for each experience
   const [skooldioIdx, setSkooldioIdx] = useState(0);
   const [scbIdx, setScbIdx] = useState(0);
   const skooldioImages = [
-    "https://media.licdn.com/dms/image/v2/D562DAQEXGYgBoAo7JQ/profile-treasury-image-shrink_800_800/B56ZhPRmyPHQAU-/0/1753676673922?e=1754298000&v=beta&t=F0s27YXZoymUSwfjuXZ9mK_YOueAsfFyqYZqaQTCuq4",
-    "https://media.licdn.com/dms/image/v2/D562DAQHYmcVkgq4dTw/profile-treasury-image-shrink_800_800/B56ZhPTWYrG0AY-/0/1753677130018?e=1754298000&v=beta&t=v7SGw812q4zRihHKO5xH3UbGjlI09tZs1Ag-MWG_7Gs",
-    "https://media.licdn.com/dms/image/v2/D562DAQElhxbqnyiWEw/profile-treasury-image-shrink_800_800/B56ZhPTG1CHQAc-/0/1753677066343?e=1754298000&v=beta&t=XjJtFRCNq3TQWyCXs932Mksh64Rna9ckvUCeM4ZoKNw",
-    "https://media.licdn.com/dms/image/v2/D562DAQGJHeIBU12xZg/profile-treasury-image-shrink_1280_1280/B56ZhPSBSsHMAQ-/0/1753676781286?e=1754298000&v=beta&t=oB5bL-tm8Mb0hW1Ftyjke9BMMO6sLbHglH3h1yDjCKY"
-  ];
+    skd1,skd2,skd3,skd4];
   const scbImages = [
-    "https://media.licdn.com/dms/image/v2/D562DAQFTt37MQypkDQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1737868414673?e=1754298000&v=beta&t=qvcE2Oz7WKg4SgRXrbspCga7ZfeOBBVMbC2I41cb9HE",
-    "https://media.licdn.com/dms/image/v2/D562DAQHNWWM4Ityj9w/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1737868429633?e=1754298000&v=beta&t=VsBEXc1joNeqWoowMELX7EUkmQI1hhuzahGqG7edX3E"
-  ];
+    scb1,scb2];
 
   // สไตล์ที่ใช้ร่วมกันสำหรับ logo container
   const logoContainerStyle = {
@@ -245,7 +247,7 @@ export default function ResumePage() {
 </div>
             {/* CONTENT */}
             <div style={{ flex: 1, minWidth: 200 }}>
-              <h4 className="h4 timeline-item-title">Product Management, SCB Tech X (Internship)</h4>
+              <h4 className="h4 timeline-item-title">Quality Assurance, SCB Tech X (Internship)</h4>
               <span>Summer 2024</span>
               <ul style={{ margin: '8px 0 0 16px', color: 'white' }}>
                 <li>📌 Contributed to agile ceremonies and sprint planning in product squads.</li>
@@ -259,7 +261,7 @@ export default function ResumePage() {
             {/* LOGO */}
             <div style={{ ...logoContainerStyle, ...squareLogoStyle }}>
               <Image
-                src="https://media.licdn.com/dms/image/v2/D560BAQGQquSMebKE_Q/company-logo_200_200/company-logo_200_200/0/1714712721817?e=1756339200&v=beta&t=iLuvgKr1oGAsjKCO0Lo_hf_xoIAtkJrUESBXztRBy68"
+                src={innovasive}
                 alt="Innovasive logo"
                 width={72}
                 height={72}
@@ -273,11 +275,14 @@ export default function ResumePage() {
             </div>
             {/* CONTENT */}
             <div style={{ flex: 1, minWidth: 200 }}>
-              <h4 className="h4 timeline-item-title">UX/UI Design, Innovasive (Freelance)</h4>
+              <h4 className="h4 timeline-item-title">Product Owner, Innovasive (Internship)</h4>
               <span>2023 - 2024</span>
               <ul style={{ margin: '8px 0 0 16px', color: 'white' }}>
-                <li>📌 Designed user interfaces for internal dashboard tools using Figma.</li>
-                <li>📌 Conducted UX research and usability testing with client teams.</li>
+                <li>📌 Worked closely with the Product Manager in gathering and refining product requirements,
+collaborating with stakeholders, and gaining an understanding of the work processes </li>
+                <li>📌 Assisted Product Owners in Design Flow , Create User Stories and Sprint Planning for UX/UI Designer, Business Analyst, QA, and Developer Team</li>
+                 <li>📌 Participated actively in grooming meetings and sprint planning, collaborating with the team to refine
+user stories, prioritize tasks, and set clear sprint goals </li>
               </ul>
             </div>
           </li>
@@ -287,7 +292,7 @@ export default function ResumePage() {
             {/* LOGO */}
             <div style={{ ...logoContainerStyle, ...squareLogoStyle }}>
               <Image
-                src="https://media.licdn.com/dms/image/v2/C4D0BAQGRQp4hE-cLZg/company-logo_100_100/company-logo_100_100/0/1655716670526?e=1756339200&v=beta&t=t-paNt4aDEf2x0V4LJO_yyDscBXMA2suGLN3ugrp9TQ"
+                src={uxasso}
                 alt="UX Association logo"
                 width={72}
                 height={72}
@@ -301,11 +306,11 @@ export default function ResumePage() {
             </div>
             {/* CONTENT */}
             <div style={{ flex: 1, minWidth: 200 }}>
-              <h4 className="h4 timeline-item-title">Event Organizer, UX Thailand / UX Association</h4>
+              <h4 className="h4 timeline-item-title">UX Researcher, UX Association</h4>
               <span>2023</span>
               <ul style={{ margin: '8px 0 0 16px', color: 'white' }}>
-                <li>📌 Helped organize UX Thailand 2023 – the biggest UX conference in SEA.</li>
-                <li>📌 Coordinated with speakers and managed participant registration systems.</li>
+                <li>📌 Utilizing Usability Testing through interviews with participants Responsible for UX measurement and analysis </li>
+                <li>📌 Conducted user research, designed and implemented user studies, analyzed data, and presented findings.</li>
               </ul>
             </div>
           </li>

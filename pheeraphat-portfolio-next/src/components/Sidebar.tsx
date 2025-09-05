@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import profile from "../../public/profile.jpg"
 import { IoChevronDownOutline, IoMailOutline, IoPhonePortraitOutline, IoCalendarOutline, IoLocationOutline, IoLogoFacebook, IoLogoTwitter, IoLogoInstagram } from 'react-icons/io5';
 
 export default function Sidebar() {
@@ -16,7 +17,7 @@ export default function Sidebar() {
       <div className="sidebar-info">
         <figure className="avatar">
           <Image
-            src="https://media.licdn.com/dms/image/v2/D5603AQEOqCwrluBHkw/profile-displayphoto-crop_800_800/B56ZhPLEvfHQAI-/0/1753674962024?e=1756339200&v=beta&t=IXZjC5AVLV1TEYr8RoaAOUbQnA2cw0PT0l2RIgb-hsU"
+            src={profile}
             alt="avatar"
             width={80}
             height={80}
